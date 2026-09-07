@@ -1,0 +1,75 @@
+:root {
+  --bg-top: #f6f7fb;
+  --bg-bottom: #eef0f7;
+  --surface: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --border: #d5d9e2;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-focus: rgba(79, 70, 229, 0.22);
+  --error: #dc2626;
+  --success: #16a34a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1100px 600px at 12% -10%, rgba(99, 102, 241, 0.18), transparent 60%),
+    radial-gradient(900px 520px at 108% 110%, rgba(14, 165, 233, 0.14), transparent 55%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+::selection {
+  background: var(--primary-focus);
+}
+
+.link:focus-visible,
+.password-toggle:focus-visible,
+.submit-btn:focus-visible {
+  outline: 3px solid var(--primary-focus);
+  outline-offset: 2px;
+}
+
+.submit-btn:focus-visible {
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
